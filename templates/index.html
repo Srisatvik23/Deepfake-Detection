@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Verifake - Deepfake Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2 class="logo">Verifake</h2>
+      <ul>
+        <li><a href="/">Homepage</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="container">
+        <h1>Deepfake Detection</h1>
+
+        <div class="upload-card">
+          <form method="post" enctype="multipart/form-data">
+            <label for="file">Upload Video</label>
+            <input
+              type="file"
+              name="file"
+              id="file"
+              accept="video/*"
+              required
+            />
+            <button type="submit">Analyze</button>
+          </form>
+
+          {% if result %}
+          <p class="result">{{ result|safe }}</p>
+          {% endif %}
+        </div>
+
+        <div class="instructions">
+          <h2>How to Use Verifake</h2>
+          <ol>
+            <li>Upload an MP4 video under 30 seconds.</li>
+            <li>Click the “Analyze” button to begin deepfake detection.</li>
+            <li>Wait a few seconds for the result to be displayed.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+The dataset is not provided here. You will need to download it from a trusted source.
+This model was trained on videos from FaceForensics++; specifically, it used a set of 
+300 real and 300 fake videos from their collection.
+
+After downloading the dataset create 2 folders within this folder called real and fake.
+Add the real and fake videos obtained in their respective folders.

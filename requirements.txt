@@ -1,0 +1,7 @@
+flask
+torch
+torchvision
+tqdm
+opencv-python
+Pillow
+mediapipe
